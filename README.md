@@ -1,30 +1,24 @@
-# 🚀 2-Tier Java Application with Docker & MySQL
-
-This project demonstrates a simple 2-tier architecture using:
-
-- Java (Application Layer)
-- MySQL (Database Layer)
-- Docker & Docker Compose (Containerization & Orchestration)
-
-The application connects to a MySQL database, creates a table, inserts data, and reads records.
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ What This Project Demonstrates
 
-App Container (Java)  →  MySQL Container  
-Both services run in the same Docker network using Docker Compose.
+- Creating Docker images from Java applications
+- Writing optimized Dockerfiles
+- Using lightweight base images
+- Managing containers, images, and networks
+- Tagging and pushing images to Docker Hub
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Build Image
 
-- Java 17
-- MySQL 8.0
-- Docker
-- Docker Compose
-- Linux (Ubuntu)
-- AWS EC2 (Deployment Tested)
+```bash
+docker build -t java-app .
 
+docker run java-app    -to run
 
+docker tag java-app your-dockerhub-username/java-app
+docker push your-dockerhub-username/java-app
 
+make sure you are logedin dockerhub.
